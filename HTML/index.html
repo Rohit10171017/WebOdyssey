@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name | Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0d0d0d;
+  color: #eaeaea;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(15,15,15,0.9);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  z-index: 10;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00ffc3;
+}
+.logo span { color: #fff; }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #eaeaea;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #00ffc3;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #111, #1a1a1a);
+  padding: 0 10%;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+.hero-content span {
+  color: #00ffc3;
+}
+.hero-content p {
+  margin: 20px 0 40px;
+  font-size: 1.1rem;
+  color: #aaa;
+}
+.btn {
+  background: #00ffc3;
+  color: #0d0d0d;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: transparent;
+  border: 2px solid #00ffc3;
+  color: #00ffc3;
+}
+
+/* Section Headings */
+section {
+  padding: 80px 10%;
+  text-align: center;
+}
+section h2 {
+  font-size: 2.2rem;
+  color: #00ffc3;
+  margin-bottom: 40px;
+}
+
+/* About */
+#about p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #bbb;
+}
+
+/* Skills */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.skill {
+  background: #1a1a1a;
+  color: #00ffc3;
+  padding: 15px 25px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.skill:hover {
+  background: #00ffc3;
+  color: #0d0d0d;
+  transform: translateY(-6px);
+}
+
+/* Projects */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.project {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 25px;
+  width: 280px;
+  text-align: center;
+  transition: 0.3s;
+}
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,255,195,0.3);
+}
+.project h3 { color: #00ffc3; margin-bottom: 10px; }
+.project p { color: #bbb; margin-bottom: 15px; }
+.project a {
+  color: #00ffc3;
+  text-decoration: none;
+  font-weight: 600;
+}
+.project a:hover { text-decoration: underline; }
+
+/* Contact */
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+input, textarea {
+  background: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  color: #fff;
+  font-size: 1rem;
+}
+input:focus, textarea:focus {
+  outline: 2px solid #00ffc3;
+}
+button.btn {
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px 0;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 2.2rem; }
+  .projects-grid, .skills-grid { flex-direction: column; align-items: center; }
+  .nav-links { gap: 15px; font-size: 0.9rem; }
+}
+/* Social Links in Hero */
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: #00ffc3;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Footer Social Links */
+.footer-social {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.footer-social a {
+  color: #00ffc3;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+/* Learning, Projects, and Goals Sections */
+#learning, #projects, #goals {
+  padding: 80px 20px;
+  background: #111;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+
+#learning h2, #projects h2, #goals h2 {
+  color: #00ffc3;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+#learning ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.project {
+  margin-bottom: 30px;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 15px rgba(0, 255, 195, 0.1);
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 195, 0.3);
+}
+
+.project a {
+  color: #00ffc3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project a:hover {
+  color: #fff;
+}
+/* Projects Section - Funny Version */
+#projects {
+  padding: 80px 20px;
+  background: #111;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+
+#projects h2 {
+  color: #00ffc3;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.project {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 15px rgba(0, 255, 195, 0.1);
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 195, 0.3);
+}
+
+.project h3 {
+  color: #00ffc3;
+  margin-bottom: 10px;
+}
+
+.project p {
+  color: #bbb;
+  font-size: 1rem;
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo">Rohit Subhas Jadhav<span>.</span></div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Hey, I'm <span>Rohit Subhas Jadhav</span></h1>
+        <p>
+          A passionate Developer & DSA Learner building impactful web
+          experiences.
+        </p>
+        <a href="#contact" class="btn">Let’s Connect</a>
+
+        <!-- Social Links Start -->
+        <div class="social-links">
+          <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+          <a
+            href="https://www.linkedin.com/in/rohit-jadhav-462052373/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="https://x.com/RohitJa39504546" target="_blank" rel="noopener"
+            >X</a
+          >
+          <!-- optional -->
+        </div>
+        <!-- Social Links End -->
+      </div>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am Rohit Subhas Jadhav ,I know only this much about me</p>
+    </section>
+
+    <section id="learning">
+      <h2>What I’m Currently Learning</h2>
+      <ul>
+        <li>Mastering C++ for problem solving</li>
+        <li>
+          Data Structures and Algorithms (arrays, linked lists, trees, graphs)
+        </li>
+        <li>Web Development — HTML, CSS, JavaScript basics</li>
+        <li>Git & GitHub for version control</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Imaginary Projects 😎</h2>
+
+      <div class="project">
+        <h3>DSA Practice Repository</h3>
+        <p>
+          A collection of problems I solved… mostly in my dreams while
+          pretending I’m a coding ninja. 🥷
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Web Experiments</h3>
+        <p>
+          Mini web apps I designed in my imagination — includes invisible
+          buttons and secret features. 🪄
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Portfolio of the Future</h3>
+        <p>
+          The website you’re looking at is actually my first masterpiece. It’s
+          futuristic, stylish, and currently a work-in-progress… literally. 🛸
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Top Secret Algorithm</h3>
+        <p>This one’s so advanced, even I don’t know what it does yet. 🤔</p>
+      </div>
+    </section>
+<!-- Projects -->
+    <section id="projects">
+      <h2>Projects (Learning in Progress)</h2>
+
+      <div class="project">
+        <h3>DSA Practice Repository</h3>
+        <p>
+          A collection of my solutions for popular Data Structures and
+          Algorithms problems written in C++.
+        </p>
+        <a
+          href="https://github.com/yourusername/DSA-Practice"
+          target="_blank"
+          rel="noopener"
+          >View on GitHub</a
+        >
+      </div>
+
+      <div class="project">
+        <h3>Web Development Experiments</h3>
+        <p>
+          Mini web apps and creative layouts built while learning front-end
+          development.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Upcoming: Personal Portfolio</h3>
+        <p>
+          The website you’re viewing now — coded from scratch as part of my
+          learning journey.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">C++</div>
+        <div class="skill">DSA</div>
+      </div>
+    </section>
+
+    
+
+    <section id="goals">
+      <h2>My Next Goals</h2>
+      <p>
+        I’m currently focused on mastering DSA and web development fundamentals.
+        In the next few months, I plan to create full-fledged projects like
+        algorithm visualizers and dynamic web apps.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Get In Touch</h2>
+      <form
+        id="contact-form"
+        action="https://formspree.io/f/yourFormID"
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener"
+          >GitHub</a
+        >
+        |
+        <a
+          href="https://linkedin.com/in/yourusername"
+          target="_blank"
+          rel="noopener"
+          >LinkedIn</a
+        >
+      </div>
+    </footer>
+
+    <!-- Smooth Scroll -->
+    <script>
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          document
+            .querySelector(link.getAttribute("href"))
+            .scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
+  </body>
+</html>
