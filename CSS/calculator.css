@@ -71,3 +71,14 @@ button:hover{
   cursor: pointer;
   transition: all 0.2s ease;
 }
+
+.row{
+  display: flex;
+}
+.col{
+
+  align-items: center;
+  justify-content: center;
+}
+
+
