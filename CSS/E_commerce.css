@@ -102,7 +102,10 @@ body{
  }
 
  .container3{
+  max-width: 1080px;
+  margin: auto;
   padding: 0px 25px;
+  
  }
 
  .row3{
@@ -115,8 +118,13 @@ body{
  .col3{
   flex-basis: 25%;
   padding: 10px;
-  margin-bottom: 5opx;
+  margin-bottom: 50px;
   min-width: 200px;
+  transition: transform 0.5s;
+ }
+
+ .col3:hover{
+  transform: translateX(-5px);
  }
  .col3 a img{
   width: 100%;
@@ -130,3 +138,138 @@ body{
     width: 15px;
     height: 16px;
  }
+
+ .offer{
+  padding: 30px 0px;
+  margin-top: 80px;
+ }
+
+ .container4{
+  max-width: 1080px;
+  margin: auto;
+  padding: 0px 25px;
+ }
+ 
+ .row4{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+ }
+
+ .col4{
+  flex-basis: 50%;
+  min-width: 300px;
+ }
+
+ .col4 img{
+  max-width: 100%;
+  padding: 50px;
+ }
+
+ .col4 h2{
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0px;
+ }
+ small{
+  color: #555;
+  font-size: smaller;
+ }
+
+ .btn{
+  display: inline-block;
+  background: #ff523b;
+  color: #fff;
+  padding: 8px 30px;
+  margin: 30px 0px;
+  border-radius: 30px;
+  transition: transform 0.5s;
+ }
+
+ .btn:hover{
+  background-color: #566;
+ }
+
+ .rew{
+  padding-top: 100px;
+ }
+
+ .container5{
+  max-width: 1080px;
+  margin: auto;
+  padding: 0 25px;
+ }
+
+.row5{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.col5{
+  flex-basis: 30%;
+  margin-bottom: 30px;
+  min-width: 250px;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 0 20px  0px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.col5 p {
+  margin: 12px 0px 25px;
+  font-size: 12px;
+  color: #777;
+}
+
+.col5>img{
+  width: 50px;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+
+.col5 h3{
+  font-size: 16px;
+  color: #555 ;
+  font-weight: 600;
+}
+
+.col5:hover{
+  transform: translateY(-5px);
+}
+
+
+.brand{
+  margin: 100px auto;
+}
+
+.container5{
+  max-width: 1080px;
+  margin: auto;
+  padding: 0px 25px;
+}
+
+.row6{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.col5{
+  width: 160px;
+}
+
+.col6 img{
+  width: 100%;
+  cursor: pointer;
+  filter:grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.col6 img:hover{
+  filter: grayscale(0%);
+}
