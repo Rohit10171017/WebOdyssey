@@ -81,7 +81,7 @@ body{
 .col2 img{
   width: 100%;
 }
- .container3 h2{
+ .container3>h2{
   text-align: center;
   display: block;
   color: #555;
@@ -89,7 +89,7 @@ body{
   line-height: 50px;
  }
  
- .container3 h2::after{
+ .container3>h2::after{
   content:"";
   display: flex;
   width: 80px;
@@ -241,12 +241,11 @@ body{
   transform: translateY(-5px);
 }
 
-
 .brand{
   margin: 100px auto;
 }
 
-.container5{
+.container6{
   max-width: 1080px;
   margin: auto;
   padding: 0px 25px;
@@ -259,7 +258,7 @@ body{
   justify-content: space-around;
 }
 
-.col5{
+.col6{
   width: 160px;
 }
 
@@ -272,4 +271,101 @@ body{
 
 .col6 img:hover{
   filter: grayscale(0%);
+}
+
+.footer{
+  background-color:#222831;
+  color:#eeeeee;
+  font-size:14px;
+  padding:60px 0 20px;
+}
+.container7{
+  max-width: 1300px;
+  margin: auto;
+  padding: 0px 25px;
+}
+ .row7{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+ }
+
+.footer h3{
+  color: #ff523b;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.col7-1 div{
+  margin-top: 20px;
+}
+.col7-1 img{
+  width: 140px;
+  filter: brightness(1.1);
+  margin: 5px 0px;
+  transition: transform 0.5s ease;
+
+}
+
+.col7-2{
+  flex: 1;
+  text-align: center;
+}
+
+.col7-3{
+  flex-basis: 12%;
+  text-align: center;
+  min-width:250px;
+  margin-bottom: 20px;
+}
+
+.footer li{
+  display: block;
+  transition: color 0.3 ease;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.footer li:hover{
+  color: #ff523b;
+}
+
+.col7-1 img:hover{
+  transform:translateY(-5px);
+}
+
+.row-h2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 100px auto 50px;
+  h2{
+    margin-left: 15px;
+  }
+}
+
+select{
+  border: 1px solid #ff523b;
+  padding: 5px;
+}
+
+.next-page{
+  margin: 0px auto 80px;
+}
+
+.next-page button{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: 0px 5px;
+  background-color: white;
+  border: 1px solid #ff523b;
+  transition: background-color 0.5s ease;
+}
+
+.next-page button:hover{
+  background-color: #ff523b;
 }
