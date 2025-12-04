@@ -463,3 +463,74 @@ select{
 .urg-col p{
   color: #555;
 }
+
+.cart-page{
+  margin: 80px auto;
+}
+.cart-container{
+  max-width: 1080px;
+  padding: 0px 25px;
+  margin: auto;
+}
+
+.cart-container table{
+  width: 100%;
+  border-collapse: collapse;
+}
+ td{
+  padding: 10px 5px;
+ }
+
+ .cart-info{
+  display: flex;
+  flex-wrap: wrap;
+ }
+ td img{
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+ }
+
+ td input{
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+ }
+th{
+  text-align: left;
+  padding: 5px;
+  color: #fff;
+  background-color: #ff523b;
+  font-weight: normal;
+}
+ td:last-child{
+  text-align: right;
+ }
+
+ th:last-child{
+  text-align: right;
+ }
+ .image-info p{
+  color: #555;
+ }
+
+ .image-info a{
+  text-decoration: none;
+  color: #ff523b;
+  font-size: 11px;
+ }
+
+ .about-bill{
+  display: flex;
+  justify-content: flex-end;
+ }
+
+ .about-bill table{
+  width: 100%;
+  border-top: 3px solid #ff523b;
+  max-width: 380px;
+ }
+
+ .about-bill a{
+  text-decoration: none;
+ }
