@@ -102,7 +102,7 @@ body{
     padding: 2.5rem;
     border-radius: 10px;
     text-align: center;
-    /* animation: modalPopup 0.3 ease-out; */
+    animation: modalPopup 0.3 ease-out;
     min-width: 300px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
@@ -123,4 +123,15 @@ body{
     font-family: 'Boolo Bhaina',cursive;
     font-size: 1.2rem;
     transition: background-color 0.3 ease;
+}
+
+@keyframes modalPopup {
+    from{
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
 }

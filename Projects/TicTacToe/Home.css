@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  user-select: none;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.container {
+  max-width: 1000px;
+  margin: 80px auto;
+  animation: fadeIn 1s ease;
+  padding: 40px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.35);
+}
+.Welcome {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+.aboutgame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.6;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 850px;
+  text-align: center;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
+}
+.Welcome h1 {
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+.aboutgame p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+button {
+  padding: 14px 36px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.8);
+  transform: translateY(-3px) scale(1.03);
+}
+
+button:active {
+  transform: translateY(0) scale(0.97);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    margin: 40px 16px;
+    padding: 25px;
+  }
+
+  .Welcome h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .aboutgame {
+    padding: 15px;
+    margin: 10px auto;
+  }
+
+  .aboutgame p {
+    font-size: 0.95rem;
+  }
+
+  button {
+    padding: 12px 28px;
+    font-size: 16px;
+  }
+}
