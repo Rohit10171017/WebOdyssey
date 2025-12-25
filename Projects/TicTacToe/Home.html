@@ -36,7 +36,11 @@
     <script>
         function Gamestart()
         {
+            let tingStart = new Audio("/Audio/TicTacToe/Start.mp3")
+            tingStart.play();
+            tingStart.onended = () => {
             window.location.href = "index.html";
+        };
         }
     </script>
   </body>

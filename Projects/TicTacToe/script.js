@@ -38,12 +38,6 @@ const changeTurn = (turn) => {
 
 const checkWin = () => {
   const check = ArrayBox.every((ele) => ele.textContent !== "");
-  if (check === true) {
-    tingDraw.play();
-    winmsg.textContent = `It's a Draw 🤝`;
-    winModal.style.display = "flex";
-    PlayAgain.addEventListener("click", resetFun);
-  }
   const win = [
     [0, 1, 2],
     [3, 4, 5],
@@ -70,6 +64,12 @@ const checkWin = () => {
       winModal.style.display = "flex";
       PlayAgain.addEventListener("click", resetFun);
     }
+  }
+  if (check === true && isGameOver === false) {
+    tingDraw.play();
+    winmsg.textContent = `It's a Draw 🤝`;
+    winModal.style.display = "flex";
+    PlayAgain.addEventListener("click", resetFun);
   }
 };
 boxes.forEach((ele) => {
