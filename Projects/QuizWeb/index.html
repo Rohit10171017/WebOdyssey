@@ -17,17 +17,19 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="start-btn">
-        <button>Start Quiz</button>
+      <button>Start Quiz</button>
     </div>
-    <div class="infobox  activeinfo">
+    <div class="infobox">
       <div class="info-title"><span>Some Rules of this Quiz</span></div>
       <div class="info-list">
         <div>
-          <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
+          <div class="info">
+            1. You will have only <span>15 seconds</span> per each question.
+          </div>
           <div class="info">
             2. Once you select your answer, it can't be undone.
           </div>
@@ -44,8 +46,50 @@
       </div>
       <div class="button">
         <button class="quit">Exit Quiz</button>
-        <button class="restart">Continue</button>
+        <button class="continue">Continue</button>
       </div>
     </div>
+    <div class="quizbox">
+      <header>
+        <div class="title">Awesome Quiz Applications</div>
+        <div class="timer">
+          <div class="time_left_msg">Time Off</div>
+          <div class="timer_sec">00</div>
+        </div>
+        <div class="time-line" style="width: 0px"></div>
+      </header>
+      <section>
+        <div class="que_txt">
+          <span></span>
+        </div>
+        <div class="option_list">
+          <div class="option disabled" oneclick="optionSelected(this)">
+            <span></span>
+          </div>
+          <div class="option disabled" oneclick="optionSelected(this)">
+            <span></span>
+          </div>
+          <div class="option disabled" oneclick="optionSelected(this)">
+            <span></span>
+          </div>
+          <div class="option disabled" oneclick="optionSelected(this)" style="margin-bottom: 0px;">
+            <span></span>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="total_que">
+          <span class="count">
+            <span class="no no1">1</span>
+            <span>of</span>
+            <span class="no">10</span>
+            <span>Questions</span>
+          </span>
+        </div>
+        <button class="next_btn show">Next Que</button>
+      </footer>
+    </div>
+    <script src="quetions.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
